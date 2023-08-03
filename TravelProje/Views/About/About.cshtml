@@ -1,0 +1,28 @@
+﻿@using TravelProje.Models.Sınıflar
+@model List<Hakkımızda>
+
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+<body>
+
+    <div class="content">
+        <div class="wrap">
+            <div class="about">
+                <h3>Hakkımızda</h3>
+
+                @foreach (var item in Model)
+                {
+                    <img src="@item.FotoURL" alt="" />
+                    <p>@item.Aciklama</p>
+                }
+            </div>
+        </div>
+    </div> 
+
+</body>
+</html>
